@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/simple-crypto-js@2.5.0/dist/SimpleCrypto.min.js"></script></head>
+</head>
+<body>
+
+<h1>Puzzle</h1>
+<script type="text/javascript">
+    function unscrambleClue(cipherText, secretKey, id) {
+        try {
+            var simpleCrypto = new SimpleCrypto(secretKey);
+            //console.log(simpleCrypto.encrypt("You finished, Congrats!", secretKey));
+            const decipherText = simpleCrypto.decrypt(cipherText);
+
+            document.getElementById(id).innerHTML = decipherText;
+        } catch(err){
+            document.getElementById(id).innerHTML = "INCORRECT - TRY A DIFFERENT SECRET KEY";
+        }
+    }
+
+</script>
+
+<h2>Clue 1</h2>
+<p>(1 + 4) * 5! / 10 + 20</p>
+
+<h3>Guess:</h3>
+<input type="text" id="partonesecret" name="partonesecret" value="Enter Secret from Clue 1"><br>
+<button type="button" 
+onclick="unscrambleClue('bad972fed472719b541c430561e9c05a557a995cb05977bac6a8caffba96aacbLVNehk4JnZj3oWzI1Xs3xMB7+xeupxMK9+xwJhb5YcE=4acfabd7784a805db15f74f685c7e128f09f05b1b71c4021d52aa8be4a7bdcb6', document.getElementById('partonesecret').value, 'clue2')">
+    Unlock Clue 2
+</button>
+
+<h2>Clue 2</h2>
+<p id="clue2">Submit a Key to Unscramble Clue 2</p>
+
+<h3>Guess:</h3>
+<input type="text" id="parttwosecret" name="parttwosecret" value="Enter Secret from Clue 2"><br>
+<button type="button" 
+onclick="unscrambleClue('2c7673ea9beac0e4b106a2a8aa76040b6f2466f44fa9b47095be6d536e48ebc3BP9iki9vcn7vfyIZjL1y1XgQrseOhhsNJyAG6MgZM1Z7RNs2jPNHtXMBgfN09hqWPdTGDV0AVSPGHy8X+b310bEFN7aQoIELUhE0c1pzRsm4Gdgr/ztnl3+SFuA2s2GXkxvsJdoQwqNc5WqZ6j4WvF1JjGWwPrcdGWRU6MdsHRkgRPPu7rNYCnpNAZmV/AROaoMHYQ0FMiaTMF6l+e20ayFhZMg9s4GCtS3aO530zatbfnenUDCFVVdKAqamwuGHed07f1c75176a61a3d30cb3b44367a58b2f7bb93ae07f3c46903d85a5a618952', document.getElementById('parttwosecret').value, 'clue3')">
+    Unlock Clue 3
+</button>
+
+<h2>Clue 3</h2>
+<p id="clue3">Submit a Key to Unscramble Clue 3</p>
+
+<h3>Guess:</h3>
+<input type="text" id="partthreesecret" name="partthreesecret" value="Enter Secret from Clue 3"><br>
+<button type="button" 
+onclick="unscrambleClue('8fd944b5b255394a6ff8642b2cc86bb65f9fe71639a9f8afcf4f6693a9b1065322L9vUDh3QsioOOtCPV3W/DibRQsMsOMQlPolCuQc8s=fe329aa4190013f8e19ce5207d97cc3f75a87b53796261e941cb5ab25db2d51c', document.getElementById('partthreesecret').value, 'clue4')">
+    Unlock Clue 4
+</button>
+
+<h2>Clue 4</h2>
+<p id="clue4">Submit a Key to Unscramble Clue 4</p>
+
+<h3>Guess:</h3>
+<input type="text" id="partfoursecret" name="partfoursecret" value="Enter Secret from Clue 4"><br>
+<button type="button" 
+onclick="unscrambleClue('5cbdaeac6668cadbc83a06d9919e0ba3aa6fcbce613266ea62f8714ebc6ca1ccy/dGkGjs0I6sPO3Fjd4DTWT02sTew/O4Szj0D1MOTDBKVwWf+/rOPkFokJiPD1jpn39xXn5SN7NwDwlpwgi3Aw==3d92cd1a265ef7d20e5341f8b4045486408674678e259e93ebef48e97ce66d95', document.getElementById('partfoursecret').value, 'clue5')">
+    Unlock Clue 5
+</button>
+
+<h2>Clue 5</h2>
+<p id="clue5">Submit a Key to Unscramble Clue 4</p>
+
+<h3>Guess:</h3>
+<input type="text" id="partfivesecret" name="partfivesecret" value="Enter Secret from Clue 5"><br>
+<button type="button" 
+onclick="unscrambleClue('cdd49b684ba7884ea43e28b991572520c1cb335859d41a1f341cc3adb83f7b68qk9+cbcbEmWF9MKsFQEMiAz83j3OL37CqmueLhT3k6A=2a6417bf1e8744ae48768adc1d49e73636763c09cb7d0d288faf336f586afb6d', document.getElementById('partfivesecret').value, 'clue6')">
+    Beat Puzzle!
+</button>
+
+<h2>Puzzle Status</h2>
+<p id="clue6">Incomplete</p>
+
+</body>
+</html>
